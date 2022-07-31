@@ -6,7 +6,6 @@
 //
 
 #import "DynamicCell.h"
-#import "DynamicCellViewModel.h"
 #import "DynamicItemViewModel.h"
 #import "DynamicItemViewFactory.h"
 #import "DynamicItemView.h"
@@ -108,10 +107,10 @@
     }
 }
 
-- (void)renderWithViewModel:(DynamicCellViewModel *)viewModel {
+- (void)renderWithViewModel:(DynamicItemViewModel *)viewModel {
     self.backgroundColor = [UIColor whiteColor];
     
-    for (DynamicItemViewModel *itemVM in viewModel.dynamicItemViewModels) {
+    for (DynamicItemViewModel *itemVM in viewModel.subItemViewModels) {
         Class itemViewClass = [DynamicItemViewFactory itemViewClassForItemViewModelClass:itemVM.class];
         DynamicItemView *itemView = [[_DynamicReusableItemViewQueue shareInstance] dequeueReusableItemViewWithIdentifier:NSStringFromClass(itemViewClass)];
         if (!itemView) {

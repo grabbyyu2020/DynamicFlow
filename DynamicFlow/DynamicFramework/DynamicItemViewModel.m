@@ -26,7 +26,11 @@
 }
 
 - (float)height {
-    return 10;
+    float height = 0;
+    for (DynamicItemViewModel *itemVM in self.subItemViewModels) {
+        height += itemVM.height;
+    }
+    return height;
 }
 
 - (void)addSubItemViewModel:(DynamicItemViewModel *)itemViewModel {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B908BDC5288539E300ED63C5 /* DynamicItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = B908BDC4288539E300ED63C5 /* DynamicItems.plist */; };
-		B908BDD228854C6400ED63C5 /* DynamicCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B908BDC828854C6400ED63C5 /* DynamicCellViewModel.m */; };
 		B908BDD328854C6400ED63C5 /* DynamicItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B908BDCA28854C6400ED63C5 /* DynamicItemViewModel.m */; };
 		B908BDD428854C6400ED63C5 /* DynamicItemViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B908BDCC28854C6400ED63C5 /* DynamicItemViewFactory.m */; };
 		B908BDD528854C6400ED63C5 /* DynamicItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B908BDCD28854C6400ED63C5 /* DynamicItemView.m */; };
@@ -46,13 +45,11 @@
 
 /* Begin PBXFileReference section */
 		B908BDC4288539E300ED63C5 /* DynamicItems.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DynamicItems.plist; sourceTree = "<group>"; };
-		B908BDC828854C6400ED63C5 /* DynamicCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicCellViewModel.m; sourceTree = "<group>"; };
 		B908BDC928854C6400ED63C5 /* DynamicItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicItemView.h; sourceTree = "<group>"; };
 		B908BDCA28854C6400ED63C5 /* DynamicItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicItemViewModel.m; sourceTree = "<group>"; };
 		B908BDCB28854C6400ED63C5 /* DynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicCell.h; sourceTree = "<group>"; };
 		B908BDCC28854C6400ED63C5 /* DynamicItemViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicItemViewFactory.m; sourceTree = "<group>"; };
 		B908BDCD28854C6400ED63C5 /* DynamicItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicItemView.m; sourceTree = "<group>"; };
-		B908BDCE28854C6400ED63C5 /* DynamicCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicCellViewModel.h; sourceTree = "<group>"; };
 		B908BDCF28854C6400ED63C5 /* DynamicItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicItemViewModel.h; sourceTree = "<group>"; };
 		B908BDD028854C6400ED63C5 /* DynamicItemViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicItemViewFactory.h; sourceTree = "<group>"; };
 		B908BDD128854C6400ED63C5 /* DynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicCell.m; sourceTree = "<group>"; };
@@ -116,8 +113,6 @@
 			children = (
 				B908BDCB28854C6400ED63C5 /* DynamicCell.h */,
 				B908BDD128854C6400ED63C5 /* DynamicCell.m */,
-				B908BDCE28854C6400ED63C5 /* DynamicCellViewModel.h */,
-				B908BDC828854C6400ED63C5 /* DynamicCellViewModel.m */,
 				B908BDC928854C6400ED63C5 /* DynamicItemView.h */,
 				B908BDCD28854C6400ED63C5 /* DynamicItemView.m */,
 				B908BDCF28854C6400ED63C5 /* DynamicItemViewModel.h */,
@@ -358,7 +353,6 @@
 				B908BDDD28854E5100ED63C5 /* DynamicUserProfileItemViewModel.m in Sources */,
 				B908BDF4288688BB00ED63C5 /* DynamicTextContentItemView.m in Sources */,
 				B908BDD428854C6400ED63C5 /* DynamicItemViewFactory.m in Sources */,
-				B908BDD228854C6400ED63C5 /* DynamicCellViewModel.m in Sources */,
 				B908BDFB28868C4D00ED63C5 /* DynamicImageContentItemView.m in Sources */,
 				B908BDF5288688BB00ED63C5 /* DynamicTextContentItemViewModel.m in Sources */,
 				B95BD3F1286ED82500CA4A0E /* ViewController.m in Sources */,

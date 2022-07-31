@@ -6,15 +6,14 @@
 //
 
 #import "ViewController.h"
-#import "DynamicCellViewModel.h"
-#import "DynamicUserProfileItemViewModel.h"
 #import "DynamicCell.h"
 #import "DynamicItemViewFactory.h"
+#import "DynamicItemViewModel.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray<DynamicCellViewModel *> *dynamicCellViewModels;
+@property (nonatomic, strong) NSArray<DynamicItemViewModel *> *dynamicItemViewModels;
 
 @end
 
@@ -25,14 +24,7 @@
     [self.view addSubview:self.tableView];
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DynamicItems" ofType:@"plist"];
-    NSArray<DynamicItemViewModel *> *dynamicItemViewModels = [DynamicItemViewFactory dynamicItemViewModelsWithPlistFilePath:filePath];
-    NSMutableArray<DynamicCellViewModel *> *cellVMs = [NSMutableArray array];
-    for (DynamicItemViewModel *itemViewModel in dynamicItemViewModels) {
-        DynamicCellViewModel *cellVM = [[DynamicCellViewModel alloc] init];
-        cellVM.dynamicItemViewModels = itemViewModel.subItemViewModels;
-        [cellVMs addObject:cellVM];
-    }
-    self.dynamicCellViewModels = cellVMs.copy;
+    self.dynamicItemViewModels = [DynamicItemViewFactory dynamicItemViewModelsWithPlistFilePath:filePath];
     [self.tableView reloadData];
 }
 
@@ -56,7 +48,7 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DynamicCellViewModel *viewModel = self.dynamicCellViewModels[indexPath.row];
+    DynamicItemViewModel *viewModel = self.dynamicItemViewModels[indexPath.row];
     return viewModel.height;
 }
 
@@ -69,13 +61,13 @@
         dynamicCell = [[DynamicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
     
-    DynamicCellViewModel *viewModel = self.dynamicCellViewModels[indexPath.row];
+    DynamicItemViewModel *viewModel = self.dynamicItemViewModels[indexPath.row];
     [dynamicCell renderWithViewModel:viewModel];
     return dynamicCell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dynamicCellViewModels.count;
+    return self.dynamicItemViewModels.count;
 }
 
 @end

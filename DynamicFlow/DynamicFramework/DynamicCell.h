@@ -9,13 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class DynamicCellViewModel;
+@class DynamicItemViewModel;
 
 @interface DynamicCell : UITableViewCell
 
 /// Dynamic Cell render call
 /// @param viewModel cell's view model
-- (void)renderWithViewModel:(DynamicCellViewModel *)viewModel;
+- (void)renderWithViewModel:(DynamicItemViewModel *)viewModel;
 
 @end
 
